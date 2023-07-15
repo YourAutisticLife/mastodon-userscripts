@@ -10,6 +10,19 @@
 // @grant        none
 // ==/UserScript==
 
+//
+// You will need to edit @match to work with your specific instance of Mastodon, or otherwise override it in
+// whatever plugin you use to run userscripts.
+//
+// This userscript works with the web interface of Mastodon. Your interface needs to have "Slow mode" turned on
+// in the settings.
+//
+// What it does is pretty simple: all versions of the web interface I've used are buggy. When you click on the 
+// "X new tiems" at the top of the Home column, it tries to scroll into an intelligent position but often fails.
+// This fixes that. After your click the column will scroll so that the first toot at the top is new, and it will
+// be focussed. 
+//
+
 (async function () {
     'use strict';
 
